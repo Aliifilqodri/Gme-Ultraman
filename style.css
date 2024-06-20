@@ -1,0 +1,72 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    background-image: url('background.png'); /* Replace with your background image */
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+}
+
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ultraman, .monster {
+    position: absolute;
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.1s ease;
+}
+
+.ultraman {
+    left: 50px;
+    background-image: url('img/ultra/1.png'); /* Replace with your Ultraman image */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+.monster {
+    right: 50px;
+    background-image: url('img/mon/1.png'); /* Replace with your monster image */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
+
+@keyframes moveMonster {
+    0% { right: 50px; }
+    100% { right: calc(100vw - 100px); }
+}
+
+.monster {
+    animation: moveMonster 2s linear infinite alternate;
+}
+
+@keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+
+.jump {
+    animation: jump 0.5s ease;
+}
+
+.you-lose {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: red;
+    text-shadow: 2px 2px 5px black;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}

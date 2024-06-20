@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultraman vs Monster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-music" loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="jump-sound">
+        <source src="jump-sound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="game-over-sound">
+        <source src="game-over-sound.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="game-container">
+        <div class="ultraman" id="ultraman"></div>
+        <div class="monster" id="monster"></div>
+    </div>
+    <div id="you-lose" class="you-lose">You Lose!</div>
+    <script src="script.js"></script>
+</body>
+</html>
